@@ -64,7 +64,7 @@ if [ -z "$VER" ]; then
 fi
 
 # Kernel Details
-BASE_RADIOACTIVE_VER="RADIOACTIVE_"
+BASE_RADIOACTIVE_VER="RADIOACTIVE_NOUGAT_"
 #VER="V2.45"
 RADIOACTIVE_VER="$BASE_RADIOACTIVE_VER$VER"
 
@@ -103,10 +103,13 @@ echo -e "Entorno configurado"
 # Clear terminal
 clear
 
+# Generando Ccache
 export USE_CCACHE=1
 mkdir /home/$USER/.ccache
 export CCACHE_DIR=/home/$USER/.ccache
 ccache -M 80G
+prebuilts/misc/linux-x86/ccache/ccache -M $ccsize
+
 # Funcion de limpieza del directorio de salida
 echo -e "\n\n${bldgrn}  Quieres limpiar el directorio OUT?\n"
 echo ""
@@ -131,7 +134,7 @@ else
         echo -e "Continua con la compilación NucleaROM, sin borrar archivos antiguos."
         echo -e ""
         echo -e ""
-export USE_CCACHE=1
+        export USE_CCACHE=1
 fi
 # Clear terminal
 clear
