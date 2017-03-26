@@ -31,8 +31,9 @@ echo "Eliga que device quiere compilar:"
 echo "1 - bacon - Oneplus 1"
 echo "2 - ham - Zuk z1"
 echo "3 - oneplus3 - Oneplus 3"
+echo "4 - i9300 - GalaxyS3"
 
-echo "Introduzca un numero (1-3):"
+echo "Introduzca un numero (1-4):"
 
 read device
 
@@ -47,6 +48,8 @@ elif [ "$device" == "2" ]; then
         device="ham"
 elif [ "$device" == "3" ]; then
         device="oneplus3"
+elif [ "$device" == "4" ]; then
+        device="i9300"
         else
                 echo "En serio??"
                 exit
