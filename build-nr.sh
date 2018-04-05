@@ -32,8 +32,9 @@ echo "1 - bacon - Oneplus 1"
 echo "2 - ham - Zuk z1"
 echo "3 - oneplus3 - Oneplus 3"
 echo "4 - i9300 - GalaxyS3"
+echo "5 - n7100 - GalaxyNote2"
 
-echo "Introduzca un numero (1-4):"
+echo "Introduzca un numero (1-5):"
 
 read device
 
@@ -50,6 +51,8 @@ elif [ "$device" == "3" ]; then
         device="oneplus3"
 elif [ "$device" == "4" ]; then
         device="i9300"
+elif [ "$device" == "5" ]; then
+        device="n7100"        
         else
                 echo "En serio??"
                 exit
